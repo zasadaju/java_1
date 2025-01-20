@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xnlns:th="https://www.thyneleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Dodaj osobę</h1>
+<form action="/add" method="post">
+    <label for="name">Imię</label>
+    <input type="text" id="name" name="name" required>
+    <button type="submit">Kliknij aby dodać</button>
+</form>
+<h1>Lista osób</h1>
+<ul>
+    <th:block th:each="person: ${allPersons}">
+        <li th:text="${person.name}"></li>
+    </th:block>
+</ul>
+</body>
+</html>
